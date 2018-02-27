@@ -248,8 +248,7 @@ if ($mybb->user['uid'] == 0) {
     $query = $db->simple_select('forums', '*', 'active!=0', array('order_by' => 'pid, disporder'));
 
     $forumsread = array();
-    if (isset($mybb->cookies['mybb']['forumread']))
-    {
+    if (isset($mybb->cookies['mybb']['forumread'])) {
         $forumsread = my_unserialize($mybb->cookies['mybb']['forumread']);
     }
 }
