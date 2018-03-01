@@ -409,23 +409,6 @@ if ($mybb->user['uid'] != 0) {
     $lang->welcome_back = $lang->sprintf($lang->welcome_back, build_profile_link(htmlspecialchars_uni($mybb->user['username']), $mybb->user['uid']), $lastvisit);
 
 }
-// Otherwise, we have a guest
-else {
-    switch ($mybb->settings['username_method']) {
-        case 0:
-            $login_username = $lang->login_username;
-            break;
-        case 1:
-            $login_username = $lang->login_username1;
-            break;
-        case 2:
-            $login_username = $lang->login_username2;
-            break;
-        default:
-            $login_username = $lang->login_username;
-            break;
-    }
-}
 
 // See if there are any pending join requests for group leaders
 $pending_joinrequests = '';

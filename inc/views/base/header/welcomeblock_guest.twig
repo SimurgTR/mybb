@@ -12,7 +12,17 @@
                         <td class="thead" colspan="2"><strong>{{ lang.login }}</strong></td>
                     </tr>
                     <tr>
-                        <td class="trow1" width="25%"><strong></strong></td>
+                        <td class="trow1" width="25%">
+                            <strong>
+                                {% if mybb.settings.username_method == 1 %}
+                                    {{ lang.login_username1 }}
+                                {% elseif mybb.settings.username_method == 2 %}
+                                    {{ lang.login_username2 }}
+                                {% else %}
+                                    {{ lang.login_username }}
+                                {% endif %}
+                            </strong>
+                        </td>
                         <td class="trow1"><input name="quick_username" id="quick_login_username" type="text" value="" class="textbox initial_focus" /></td>
                     </tr>
                     <tr>
