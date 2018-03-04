@@ -73,9 +73,9 @@
                                         <tr>
                                             <td colspan="3">
                                             <select name="birthdayprivacy">
-                                            <option value="all"{% if user.birthdayprivacy == 'all' or user.birthdayprivacy is empty %} selected{% endif %}>{{ lang.birthdayprivacyall }}</option>
-                                            <option value="none"{% if user.birthdayprivacy == 'none' %} selected{% endif %}>{{ lang.birthdayprivacynone }}</option>
-                                            <option value="age"{% if user.birthdayprivacy == 'age' %} selected{% endif %}>{{ lang.birthdayprivacyage }}</option>
+                                                <option value="all"{% if user.birthdayprivacy == 'all' or user.birthdayprivacy is empty %} selected{% endif %}>{{ lang.birthdayprivacyall }}</option>
+                                                <option value="none"{% if user.birthdayprivacy == 'none' %} selected{% endif %}>{{ lang.birthdayprivacynone }}</option>
+                                                <option value="age"{% if user.birthdayprivacy == 'age' %} selected{% endif %}>{{ lang.birthdayprivacyage }}</option>
                                             </select>
                                             </td>
                                         </tr>
