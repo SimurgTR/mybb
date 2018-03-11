@@ -286,7 +286,7 @@
                             {% endfor %}
                         </select>
                         <select name="datecut">
-                            <option value="1"{% if mybb.input[1] %} selected{% endif %}>{{ lang.datelimit_1_day }}</option> {# TO FIX, DOESN'T DISPLAY #} 
+                            <option value="1"{% if mybb.input[1] %} selected{% endif %}>{{ lang.datelimit_1day }}</option>
                             {% for field in [5, 10, 20, 50, 75, 100] %}
                                 <option value="{{ field }}"{% if mybb.input[field] %} selected{% endif %}>{{ attribute(lang, 'datelimit_' ~ field ~ 'days') }}</option>
                             {% endfor %}
