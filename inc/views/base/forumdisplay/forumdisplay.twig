@@ -1,7 +1,7 @@
 {% extends 'layouts/master.twig' %}
 
 {% block head %}
-    <title>{{ mybb.settings.bbname }} - {{ foruminfo.name }}</title>
+    <title>{{ foruminfo.name }} - {{ mybb.settings.bbname }}</title>
 
     {% if foruminfo.type != 'c' %}
         <link rel="alternate" type="application/rss+xml" title="{{ trans('rss_discovery_forum', foruminfo.name|striptags) }} (RSS 2.0)" href="{{ mybb.settings.bburl }}/syndication.php?fid={{ foruminfo.fid }}" />

@@ -1538,7 +1538,7 @@ function check_forum_password($fid, $pid=0, $return=false)
 			}
 			else
 			{
-				eval("\$pwnote = \"".$templates->get("forumdisplay_password_wrongpass")."\";");
+                $pwnote = 1;
 				$showform = true;
 			}
 		}
@@ -1572,9 +1572,11 @@ function check_forum_password($fid, $pid=0, $return=false)
 		}
 		else
 		{
-			$_SERVER['REQUEST_URI'] = htmlspecialchars_uni($_SERVER['REQUEST_URI']);
-			eval("\$pwform = \"".$templates->get("forumdisplay_password")."\";");
-			output_page($pwform);
+			$currentUrl = $_SERVER['REQUEST_URI'];
+			output_page(\MyBB\template('forumdisplay/password.twig', [
+                'pwnote' => $pwnote,
+                'currentUrl' => $currentUrl
+            ]));
 		}
 		exit;
 	}
